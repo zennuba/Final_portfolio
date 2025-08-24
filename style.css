@@ -326,7 +326,21 @@ img {
 /* =========================
    Contact Section
 ========================= */
-/* Wrapper */
+.contact__container {
+  display: flex;              /* gør det til flex layout */
+  align-items: stretch;       /* begge kolonner lige høje */
+  gap: 40px;                  /* luft mellem streg og indhold */
+}
+
+.contact__form-column,
+.contact__info-column {
+  flex: 1;                    /* begge fylder halvdelen */
+}
+
+.divider {
+  width: 2px;                 /* tykkelse på stregen */
+  background-color: #ccc;     /* farve på stregen */
+}/* Wrapper */
 .contact {
   font-family: Nunito, sans-serif;
   max-width: 1200px;
@@ -401,7 +415,11 @@ img {
   display: block;
   margin: 0 auto;
 }
-
+#linkedin-logo {
+    width: 40px;  /* Sæt ønsket bredde */
+    height: 40px; /* Holder proportionelt med width, eller sæt auto for højde */
+    object-fit: contain; /* Sørger for, billedet ikke bliver strakt */
+}
 /* Info block */
 .contact-info__title {
   font-size: 40px;
