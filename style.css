@@ -23,16 +23,16 @@
   --color-border: #333333;
 }
 
-/* =========================
+/* =================================================================================
    Base Styles
-========================= */
+========================================================================================= */
 body, .header, .hero, .projects__text, .projects__image {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 body {
   font-family: var(--font-base);
-  margin: 0;
+  margin: 140px;
   padding-top: 70px;
   line-height: 1.6;
   font-size: 1rem;
@@ -59,10 +59,10 @@ img {
   top: 0;
   z-index: 1000;
   background: var(--color-bg);
-  height: 70px;
+  height: 50px;
   display: flex;
   align-items: center;
-  padding: 0 2rem;
+  padding: 2rem 2rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
@@ -126,7 +126,9 @@ img {
   font-size: 1.5rem;
   cursor: pointer;
 }
-
+/* ===============================================================================================
+   Responsive Navigation
+================================================================================================= */
 .header__nav {
   justify-self: center;
 }
@@ -137,6 +139,7 @@ img {
   list-style: none;
   margin: 0;
   padding: 0;
+  font-size: 2rem;
 }
 
 .nav__link {
@@ -144,9 +147,7 @@ img {
   padding: 0.5rem;
 }
 
-/* =========================
-   Responsive Navigation
-========================= */
+
 @media (max-width: 768px) {
   .burger {
     display: block;
@@ -212,7 +213,7 @@ img {
   margin-top: 2rem;
 }
 
-.cta__button {
+.cta__button, .header__cta, .contact-form__submit {
   padding: 1rem 2rem;
   font-size: 1.25rem;
   font-weight: 400;
@@ -226,7 +227,7 @@ img {
   transition: background-color 0.3s ease;
 }
 
-.cta__button:hover {
+.cta__button:hover, .header__cta:hover, .contact-form__submit:hover {
   filter: brightness(0.9);
   background-color: #cce8ff;
 }
@@ -234,6 +235,32 @@ img {
 /* =========================
    Projects Section
 ========================= */
+.section__title {
+  
+  font-size: 2.5rem;
+  font-weight: 600;
+  
+  margin-bottom: 2rem;  
+  margin: 0;
+  padding: 0;
+  color: var(--color-text);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  letter-spacing: -0.25px;
+}
+  .about__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100%;
+}
+.section__title:hover {
+  color: var(--color-accent);
+}
+
 .projects {
   max-width: 1200px;
   margin: 0 auto;
@@ -323,6 +350,19 @@ img {
   margin-right: auto;
   text-align: left; /* hvis du vil centrere teksten inden i elementet */
 }
+
+.about__container {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .about__container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
 /* =========================
    Contact Section
 ========================= */
@@ -405,7 +445,7 @@ img {
 .contact-form__submit {
   min-width: 290px;
   height: 60px;
-  background: #1c3b28;
+  background: var(--color-accent);;
   color: white;
   font-size: 18px;
   font-weight: 700;
@@ -421,6 +461,12 @@ img {
     object-fit: contain; /* Sørger for, billedet ikke bliver strakt */
 }
 /* Info block */
+.contact-info-nav {
+.LinkedIn-logo {
+  width: 20px;
+  height: auto;
+}  
+}
 .contact-info__title {
   font-size: 40px;
   font-weight: 700;
@@ -476,7 +522,7 @@ img {
 footer {
   padding: 2rem;
   text-align: center;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   background: var(--color-surface);
   color: var(--color-text);
 }
@@ -484,9 +530,5 @@ footer {
 footer img {
   width: 500px;
   margin: 0 0.5rem;
-
-#LinkedIn-logo {
-  width: 100px;
-  height: auto;
 }
 
